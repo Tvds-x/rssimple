@@ -1,5 +1,4 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Separator } from "../ui/separator";
 import { ModeToggle } from "./mode-toggler";
 export function UserInfo() {
   return (
@@ -14,7 +13,6 @@ export function UserInfo() {
         </span>
         <ModeToggle />
       </div>
-      <Separator />
     </>
   );
 }
