@@ -1,34 +1,31 @@
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import PostsList from "./posts-list";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Separator } from "../ui/separator";
-import { Input } from "@/components/ui/input";
-import { Search } from "lucide-react";
+import { FeedInput } from "./feed-input";
+import { allPosts } from "../../mok/feed.ts";
 
 export default function Feed() {
   return (
-    <>
-      <Tabs defaultValue="all">
-        <div className="flex items-center justify-between px-4 py-2">
-          <h3 className="scroll-m-20 text-xl font-semibold tracking-tight">
-            Title
-          </h3>
-          <TabsList>
-            <TabsTrigger value="all"> All Posts</TabsTrigger>
-            <TabsTrigger value="unread">Unread</TabsTrigger>
-          </TabsList>
-        </div>
-        <Separator />
-
-        {/* <TabsContent value="all">All</TabsContent>
-        <TabsContent value="unread">Unread</TabsContent> */}
-      </Tabs>
-      <div className="bg-background/95 p-4 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <form>
-          <div className="relative">
-            <Search className="absolute left-2 top-3 h-4 w-4 text-muted-foreground" />
-            <Input placeholder="Search" className="pl-8" />
-          </div>
-        </form>
+    <Tabs defaultValue="all" className="flex flex-col h-screen">
+      <div className="flex items-center justify-between px-4 py-2">
+        <h3 className="scroll-m-20 text-xl font-semibold tracking-tight">
+          Title
+        </h3>
+        <TabsList>
+          <TabsTrigger value="all">All</TabsTrigger>
+          <TabsTrigger value="unread">Unread</TabsTrigger>
+        </TabsList>
       </div>
-    </>
+      <Separator />
+      <FeedInput />
+      <div className=" overflow-hidden">
+        <TabsContent value="all" className="h-full">
+          <PostsList items={allPosts} />
+        </TabsContent>
+        <TabsContent value="unread" className="h-full">
+          <PostsList items={allPosts.filter((item) => !item.isRead)} />
+        </TabsContent>
+      </div>
+    </Tabs>
   );
 }
