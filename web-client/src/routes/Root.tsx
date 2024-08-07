@@ -31,7 +31,7 @@ export default function Root() {
           <NavBar />
         </ResizablePanel>
         <ResizableHandle />
-        <ResizablePanel defaultSize={45} minSize={40}>
+        <ResizablePanel defaultSize={45} minSize={45}>
           <Feed />
         </ResizablePanel>
         <ResizableHandle />
