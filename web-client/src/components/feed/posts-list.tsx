@@ -25,7 +25,7 @@ export default function PostsList({ items }: { items: any }) {
                   <div className="flex items-center">
                     <TooltipTrigger className="flex items-center justify-between w-full">
                       <div
-                        className={`max-w-96 text-left ${
+                        className={`max-w-[85%] text-left ${
                           !item.isRead && "font-semibold"
                         } line-clamp-1`}
                       >

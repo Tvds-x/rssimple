@@ -10,7 +10,6 @@ import {
 import Feed from "@/components/feed/feed";
 import { UserInfo } from "@/components/user-info/user-info";
 import { NavBar } from "@/components/navbar/navbar";
-import { Separator } from "@/components/ui/separator";
 
 export default function Root() {
   const isAuth = useUserStore((state) => state.isAuth);
@@ -27,7 +26,6 @@ export default function Root() {
       <ResizablePanelGroup direction="horizontal">
         <ResizablePanel defaultSize={15} minSize={15}>
           <UserInfo />
-          <Separator />
           <NavBar />
         </ResizablePanel>
         <ResizableHandle />

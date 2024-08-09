@@ -1691,3 +1691,56 @@ export const favorites = [
     __v: 0,
   },
 ];
+
+export const feeds = [
+  {
+    _id: "668c04c52ef2850398b45adf",
+    link: "https://www.reddit.com/r/wow",
+    feedURL: "https://www.reddit.com/r/wow.rss",
+    title: "World of Warcraft",
+    date: "2024-07-08T15:24:54+00:00",
+    user: "66886ce1fcfdc36906a22ad3",
+    icon: "https://logo.clearbit.com/www.reddit.com",
+    __v: 0,
+  },
+  {
+    _id: "6692cd8e4bcce6157af23b79",
+    link: "https://www.youtube.com/channel/UCnCikd0s4i9KoDtaHPlK-JA",
+    feedURL:
+      "https://www.youtube.com/feeds/videos.xml?channel_id=UCnCikd0s4i9KoDtaHPlK-JA",
+    title: "Unsupervised Learning",
+    user: "66886ce1fcfdc36906a22ad3",
+    icon: "https://logo.clearbit.com/www.youtube.com",
+    __v: 0,
+  },
+];
+export const folders = [
+  {
+    _id: "6699677655092759c008e1ff",
+    title: "The only one folder",
+    user: "66886ce1fcfdc36906a22ad3",
+    feeds: [
+      {
+        _id: "668c04c52ef2850398b45adf",
+        link: "https://www.reddit.com/r/wow",
+        feedURL: "https://www.reddit.com/r/wow.rss",
+        title: "World of Warcraft",
+        date: "2024-07-08T15:24:54+00:00",
+        user: "66886ce1fcfdc36906a22ad3",
+        icon: "https://logo.clearbit.com/www.reddit.com",
+        __v: 0,
+      },
+      {
+        _id: "6692cd8e4bcce6157af23b79",
+        link: "https://www.youtube.com/channel/UCnCikd0s4i9KoDtaHPlK-JA",
+        feedURL:
+          "https://www.youtube.com/feeds/videos.xml?channel_id=UCnCikd0s4i9KoDtaHPlK-JA",
+        title: "Unsupervised Learning",
+        user: "66886ce1fcfdc36906a22ad3",
+        icon: "https://logo.clearbit.com/www.youtube.com",
+        __v: 0,
+      },
+    ],
+    __v: 14,
+  },
+];
